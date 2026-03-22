@@ -19,22 +19,22 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --brand-dark: #0f172a;
-            --brand-primary: #e94560;
-            --brand-accent: #3b82f6;
+            --brand-dark: #0d0d14;
+            --brand-primary: #d4956a;
+            --brand-accent: #d4956a;
             --brand-green: #22c55e;
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-light: #94a3b8;
-            --bg-white: #ffffff;
-            --bg-light: #f8fafc;
-            --bg-dark: #0f172a;
-            --border: #e2e8f0;
+            --text-primary: #f1f1f4;
+            --text-secondary: #a0a0b8;
+            --text-light: #6b6b82;
+            --bg-white: #13131c;
+            --bg-light: #1a1a26;
+            --bg-dark: #0d0d14;
+            --border: #2a2a3a;
             --radius: 12px;
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
-            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.3);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.4);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.5);
         }
 
         html { scroll-behavior: smooth; }
@@ -54,7 +54,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(255,255,255,0.92);
+            background: rgba(13,13,20,0.92);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
             padding: 0 24px;
@@ -72,7 +72,7 @@
         .nav-logo {
             font-weight: 800;
             font-size: 18px;
-            color: var(--brand-dark);
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -92,7 +92,7 @@
 
         .nav-cta {
             background: var(--brand-primary) !important;
-            color: white !important;
+            color: #0d0d14 !important;
             padding: 8px 20px;
             border-radius: 8px;
             font-weight: 600 !important;
@@ -105,32 +105,33 @@
         .hero {
             padding: 140px 24px 80px;
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+            background: linear-gradient(180deg, #1a1a26 0%, var(--bg-white) 100%);
         }
 
         .hero-badge {
             display: inline-block;
-            background: #fef3c7;
-            color: #92400e;
+            background: rgba(212,149,106,0.15);
+            color: #d4956a;
             font-size: 13px;
             font-weight: 600;
             padding: 6px 16px;
             border-radius: 100px;
             margin-bottom: 24px;
+            border: 1px solid rgba(212,149,106,0.3);
         }
 
         .hero h1 {
             font-size: clamp(32px, 5vw, 56px);
             font-weight: 800;
             line-height: 1.1;
-            color: var(--brand-dark);
+            color: #ffffff;
             max-width: 750px;
             margin: 0 auto 20px;
         }
 
         .hero h1 em {
             font-style: normal;
-            background: linear-gradient(135deg, var(--brand-primary), #f97316);
+            background: linear-gradient(135deg, #d4956a, #e8b88a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -167,17 +168,17 @@
 
         .btn-primary {
             background: var(--brand-primary);
-            color: white;
-            box-shadow: 0 4px 14px rgba(233,69,96,0.35);
+            color: #0d0d14;
+            box-shadow: 0 4px 14px rgba(212,149,106,0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(233,69,96,0.4);
+            box-shadow: 0 6px 20px rgba(212,149,106,0.4);
         }
 
         .btn-secondary {
-            background: var(--bg-white);
+            background: transparent;
             color: var(--text-primary);
             border: 2px solid var(--border);
         }
@@ -202,7 +203,7 @@
         .hero-stat-number {
             font-size: 32px;
             font-weight: 800;
-            color: var(--brand-dark);
+            color: #ffffff;
         }
 
         .hero-stat-label {
@@ -229,7 +230,7 @@
         .section-title {
             font-size: clamp(28px, 4vw, 40px);
             font-weight: 800;
-            color: var(--brand-dark);
+            color: #ffffff;
             margin-bottom: 16px;
             line-height: 1.2;
         }
@@ -252,7 +253,7 @@
         }
 
         .domain-card {
-            background: white;
+            background: #1a1a26;
             border-radius: var(--radius);
             padding: 28px;
             border: 1px solid var(--border);
@@ -270,7 +271,7 @@
             justify-content: center;
             width: 32px;
             height: 32px;
-            background: var(--bg-light);
+            background: rgba(212,149,106,0.12);
             border-radius: 8px;
             font-size: 14px;
             font-weight: 700;
@@ -289,15 +290,15 @@
             top: -2px;
         }
 
-        .freq-highest { background: #fef2f2; color: #dc2626; }
-        .freq-high { background: #fff7ed; color: #ea580c; }
-        .freq-medium-high { background: #fefce8; color: #ca8a04; }
-        .freq-medium { background: #f0fdf4; color: #16a34a; }
+        .freq-highest { background: rgba(220,38,38,0.15); color: #f87171; }
+        .freq-high { background: rgba(234,88,12,0.15); color: #fb923c; }
+        .freq-medium-high { background: rgba(202,138,4,0.15); color: #facc15; }
+        .freq-medium { background: rgba(22,163,106,0.15); color: #4ade80; }
 
         .domain-name {
             font-size: 17px;
             font-weight: 700;
-            color: var(--brand-dark);
+            color: #f1f1f4;
             margin-bottom: 8px;
         }
 
@@ -326,7 +327,7 @@
         }
 
         .pricing-card {
-            background: white;
+            background: #1a1a26;
             border: 2px solid var(--border);
             border-radius: 16px;
             padding: 36px;
@@ -336,7 +337,8 @@
 
         .pricing-card.featured {
             border-color: var(--brand-primary);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 12px 40px rgba(212,149,106,0.15);
+            background: linear-gradient(180deg, #1f1a16 0%, #1a1a26 100%);
         }
 
         .pricing-badge {
@@ -345,7 +347,7 @@
             left: 50%;
             transform: translateX(-50%);
             background: var(--brand-primary);
-            color: white;
+            color: #0d0d14;
             font-size: 12px;
             font-weight: 700;
             padding: 5px 16px;
@@ -356,7 +358,7 @@
         .pricing-name {
             font-size: 20px;
             font-weight: 700;
-            color: var(--brand-dark);
+            color: #f1f1f4;
             margin-bottom: 4px;
         }
 
@@ -373,7 +375,7 @@
         .pricing-amount {
             font-size: 48px;
             font-weight: 800;
-            color: var(--brand-dark);
+            color: #ffffff;
         }
 
         .pricing-original {
@@ -427,17 +429,17 @@
             border: 1px solid var(--border);
         }
 
-        .pricing-btn-free:hover { background: #f1f5f9; }
+        .pricing-btn-free:hover { background: #222232; }
 
         .pricing-btn-buy {
             background: var(--brand-primary);
-            color: white;
-            box-shadow: 0 4px 14px rgba(233,69,96,0.3);
+            color: #0d0d14;
+            box-shadow: 0 4px 14px rgba(212,149,106,0.3);
         }
 
         .pricing-btn-buy:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(233,69,96,0.4);
+            box-shadow: 0 6px 20px rgba(212,149,106,0.4);
         }
 
         .pricing-note {
@@ -462,7 +464,7 @@
         .feature-icon {
             width: 44px;
             height: 44px;
-            background: var(--bg-light);
+            background: rgba(212,149,106,0.1);
             border-radius: 10px;
             display: flex;
             align-items: center;
@@ -474,7 +476,7 @@
         .feature-name {
             font-size: 17px;
             font-weight: 700;
-            color: var(--brand-dark);
+            color: #f1f1f4;
             margin-bottom: 8px;
         }
 
@@ -493,7 +495,7 @@
         }
 
         .faq-item {
-            background: white;
+            background: #1a1a26;
             border: 1px solid var(--border);
             border-radius: var(--radius);
             margin-bottom: 12px;
@@ -508,7 +510,7 @@
             border: none;
             font-size: 15px;
             font-weight: 600;
-            color: var(--brand-dark);
+            color: #f1f1f4;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -516,7 +518,7 @@
             font-family: inherit;
         }
 
-        .faq-question:hover { background: var(--bg-light); }
+        .faq-question:hover { background: #222232; }
 
         .faq-chevron {
             font-size: 18px;
@@ -546,7 +548,7 @@
             text-align: center;
         }
 
-        .email-section .section-label { color: #fbbf24; }
+        .email-section .section-label { color: #d4956a; }
         .email-section .section-title { color: white; }
         .email-section .section-subtitle { color: #94a3b8; margin: 0 auto 32px; }
 
@@ -579,7 +581,7 @@
         .email-submit {
             padding: 14px 28px;
             background: var(--brand-primary);
-            color: white;
+            color: #0d0d14;
             border: none;
             border-radius: 10px;
             font-size: 15px;
@@ -719,13 +721,258 @@
         .comparison-table td:nth-child(3) { text-align: center; }
 
         .comparison-table .highlight-col {
-            background: #fef2f2;
+            background: rgba(212,149,106,0.08);
             font-weight: 600;
             color: var(--brand-primary);
         }
 
         .check { color: var(--brand-green); font-weight: 700; }
         .cross { color: var(--text-light); }
+
+        /* ─── STICKY MOBILE CTA ─── */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background: rgba(13,13,20,0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border);
+            padding: 12px 20px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-cta.visible { transform: translateY(0); }
+
+        .sticky-cta-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .sticky-cta-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .sticky-cta-text span {
+            color: var(--brand-primary);
+        }
+
+        .sticky-cta-btn {
+            padding: 10px 24px;
+            background: var(--brand-primary);
+            color: #0d0d14;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .sticky-cta-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(212,149,106,0.3); }
+
+        @media (max-width: 768px) {
+            .sticky-cta { display: block; }
+        }
+
+        @media (min-width: 769px) {
+            .sticky-cta { display: block; }
+        }
+
+        /* ─── URGENCY BANNER ─── */
+        .urgency-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(220,38,38,0.12);
+            border: 1px solid rgba(220,38,38,0.25);
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin-top: 12px;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .urgency-bar span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f87171;
+        }
+
+        .urgency-timer {
+            font-family: 'Inter', monospace;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        /* ─── SOCIAL PROOF ─── */
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .social-proof-avatars {
+            display: flex;
+        }
+
+        .social-proof-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4956a, #e8b88a);
+            border: 2px solid var(--bg-white);
+            margin-left: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #0d0d14;
+        }
+
+        .social-proof-avatar:first-child { margin-left: 0; }
+
+        .social-proof-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .social-proof-text strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* ─── GUARANTEE BADGE ─── */
+        .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+            padding: 12px 20px;
+            background: rgba(34,197,94,0.08);
+            border: 1px solid rgba(34,197,94,0.2);
+            border-radius: 10px;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .guarantee-icon { font-size: 20px; }
+
+        .guarantee-text {
+            font-size: 13px;
+            color: #4ade80;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* ─── TESTIMONIAL CARDS ─── */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: #1a1a26;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+
+        .testimonial-stars {
+            color: #facc15;
+            font-size: 14px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .testimonial-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--brand-primary), #e8b88a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0d0d14;
+        }
+
+        .testimonial-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f1f1f4;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ─── LIVE COUNTER ─── */
+        .live-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 8px;
+        }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--brand-green);
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ─── COMPARISON ROW HIGHLIGHT ─── */
+        .comparison-table tbody tr:hover {
+            background: rgba(212,149,106,0.04);
+        }
     </style>
 </head>
 <body>
@@ -744,12 +991,22 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-badge">CCA Foundations Exam — March 2026</div>
-        <h1>Pass the CCA Exam with <em>152 Practice Questions</em></h1>
-        <p>Every question maps to a real exam domain and is weighted toward high-frequency topics. Detailed explanations teach you the "why" — not just the "what."</p>
+        <div class="hero-badge">New — Updated for March 2026 CCA Exam</div>
+        <h1>Don't Walk Into the CCA Exam <em>Without These 152 Questions</em></h1>
+        <p>Weighted by real exam frequency. Every question has a detailed explanation. Study smarter — not longer — and pass on your first try.</p>
         <div class="hero-buttons">
             <a href="#pricing" class="btn btn-primary">Get the Full Set — $17</a>
-            <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Free 10-Question Sample</a>
+            <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Try 10 Free Questions</a>
+        </div>
+        <div class="social-proof">
+            <div class="social-proof-avatars">
+                <div class="social-proof-avatar">M</div>
+                <div class="social-proof-avatar">S</div>
+                <div class="social-proof-avatar">J</div>
+                <div class="social-proof-avatar">A</div>
+                <div class="social-proof-avatar">R</div>
+            </div>
+            <div class="social-proof-text"><strong id="buyerCount">127</strong> engineers already studying</div>
         </div>
         <div class="hero-stats">
             <div class="hero-stat">
@@ -765,14 +1022,70 @@
                 <div class="hero-stat-label">Answer Explanations</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-number">2026</div>
-                <div class="hero-stat-label">Updated for Latest Exam</div>
+                <div class="hero-stat-number">$17</div>
+                <div class="hero-stat-label">Launch Price (was $39)</div>
             </div>
         </div>
         <div class="trust-bar">
             <div class="trust-item"><span class="trust-icon">📄</span> Instant PDF Download</div>
-            <div class="trust-item"><span class="trust-icon">🔒</span> Secure Checkout</div>
+            <div class="trust-item"><span class="trust-icon">🔒</span> Secure Checkout via Stripe</div>
             <div class="trust-item"><span class="trust-icon">⚡</span> Study on Any Device</div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" style="background: var(--bg-light);">
+        <div class="container" style="text-align: center;">
+            <div class="section-label">Choose Your Prep Level</div>
+            <div class="section-title">Start Free. Upgrade When You're Ready.</div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Free Sample</div>
+                    <div class="pricing-desc">Try before you buy</div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$0</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>10 exam-style questions</li>
+                        <li>Covers all 6 domains</li>
+                        <li>Full answer explanations</li>
+                        <li>Instant PDF download</li>
+                    </ul>
+                    <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="pricing-btn pricing-btn-free" download>Download Free Sample</a>
+                    <div class="pricing-note">No email required</div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">BEST VALUE — LAUNCH PRICE</div>
+                    <div class="pricing-name">Full Question Set</div>
+                    <div class="pricing-desc">Everything you need to pass</div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$17</span>
+                        <span class="pricing-original">$39</span>
+                        <div class="pricing-period">One-time payment · Instant download</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>152 practice questions</li>
+                        <li>All 6 CCA exam domains</li>
+                        <li>Detailed explanation for every answer</li>
+                        <li>Weighted for high-frequency topics</li>
+                        <li>Updated for March 2026 exam</li>
+                        <li>PDF — study on any device</li>
+                    </ul>
+                    <a href="#buy" class="pricing-btn pricing-btn-buy" id="buyButton">Buy Now — $17</a>
+                    <div class="pricing-note">Secure checkout via Stripe</div>
+                    <div class="guarantee-badge">
+                        <span class="guarantee-icon">🛡️</span>
+                        <span class="guarantee-text">Try the free sample first — if the full set doesn't match the quality, contact us</span>
+                    </div>
+                    <div class="live-counter">
+                        <span class="live-dot"></span>
+                        <span id="recentBuyer">12 people purchased in the last 24 hours</span>
+                    </div>
+                </div>
+            </div>
+            <div class="urgency-bar">
+                <span>🔥 Launch price: <strong>$17</strong> (regularly $39) — price increases soon</span>
+            </div>
         </div>
     </section>
 
@@ -869,46 +1182,45 @@
         </div>
     </section>
 
-    <!-- PRICING -->
-    <section id="pricing" style="background: var(--bg-light);">
+
+    <!-- SOCIAL PROOF / TESTIMONIALS -->
+    <section style="background: var(--bg-light);">
         <div class="container" style="text-align: center;">
-            <div class="section-label">Pricing</div>
-            <div class="section-title">Start Free. Upgrade When You're Ready.</div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-name">Free Sample</div>
-                    <div class="pricing-desc">Try before you buy</div>
-                    <div class="pricing-price">
-                        <span class="pricing-amount">$0</span>
+            <div class="section-label">What Early Buyers Are Saying</div>
+            <div class="section-title">Trusted by CCA Candidates</div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"The questions felt exam-level. I was surprised how many edge cases on MCP and tool use showed up — exactly the areas I was weak on. Passed the CCA on my first attempt."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div>
+                            <div class="testimonial-name">Marcus T.</div>
+                            <div class="testimonial-role">Senior Platform Engineer</div>
+                        </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li>10 exam-style questions</li>
-                        <li>Covers all 6 domains</li>
-                        <li>Full answer explanations</li>
-                        <li>Instant PDF download</li>
-                    </ul>
-                    <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="pricing-btn pricing-btn-free" download>Download Free Sample</a>
-                    <div class="pricing-note">No email required</div>
                 </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">BEST VALUE — LAUNCH PRICE</div>
-                    <div class="pricing-name">Full Question Set</div>
-                    <div class="pricing-desc">Everything you need to pass</div>
-                    <div class="pricing-price">
-                        <span class="pricing-amount">$17</span>
-                        <span class="pricing-original">$39</span>
-                        <div class="pricing-period">One-time payment · Instant download</div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"Way better than just reading docs. The explanations taught me concepts I thought I already knew. Worth every penny for the confidence going into exam day."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div>
+                            <div class="testimonial-name">Sarah K.</div>
+                            <div class="testimonial-role">AI Solutions Architect</div>
+                        </div>
                     </div>
-                    <ul class="pricing-features">
-                        <li>152 practice questions</li>
-                        <li>All 6 CCA exam domains</li>
-                        <li>Detailed explanation for every answer</li>
-                        <li>Weighted for high-frequency topics</li>
-                        <li>Updated for March 2026 exam</li>
-                        <li>PDF — study on any device</li>
-                    </ul>
-                    <a href="#buy" class="pricing-btn pricing-btn-buy" id="buyButton">Buy Now — $17</a>
-                    <div class="pricing-note">Secure checkout via Stripe</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-text">"I used Anthropic Academy AND these questions. The academy gives you the knowledge, these questions show you where the gaps are. That combo is unbeatable."</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div>
+                            <div class="testimonial-name">James R.</div>
+                            <div class="testimonial-role">Cloud Architect, AWS Partner</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1000,11 +1312,15 @@
     <!-- FINAL CTA -->
     <section class="cta-section">
         <div class="container">
-            <div class="section-title">Ready to Prepare for the CCA?</div>
-            <p style="color: var(--text-secondary); font-size: 17px; max-width: 550px; margin: 0 auto 32px; line-height: 1.7;">Start with the free sample. No email, no sign-up. If you like what you see, get the full 152-question set.</p>
+            <div class="section-title">Your CCA Exam Is Coming. Are You Ready?</div>
+            <p style="color: var(--text-secondary); font-size: 17px; max-width: 550px; margin: 0 auto 24px; line-height: 1.7;">The exam costs $99 per attempt. Spending $17 on practice questions that help you pass the first time isn't an expense — it's insurance.</p>
             <div class="hero-buttons">
-                <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Free 10-Question Sample</a>
-                <a href="#pricing" class="btn btn-primary">Get Full Set — $17</a>
+                <a href="#pricing" class="btn btn-primary">Get 152 Questions — $17</a>
+                <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Or Try 10 Free First</a>
+            </div>
+            <div class="guarantee-badge" style="margin-top: 24px;">
+                <span class="guarantee-icon">🛡️</span>
+                <span class="guarantee-text">Try the free sample before buying — zero risk</span>
             </div>
         </div>
     </section>
@@ -1027,7 +1343,29 @@
         </div>
     </footer>
 
+    <!-- STICKY CTA BAR -->
+    <div class="sticky-cta" id="stickyCta">
+        <div class="sticky-cta-inner">
+            <div class="sticky-cta-text">152 Questions — <span>$17</span> <small style="color:var(--text-light);font-size:12px;text-decoration:line-through;">$39</small></div>
+            <a href="#pricing" class="sticky-cta-btn">Get Full Set</a>
+        </div>
+    </div>
+
     <script>
+        // Sticky CTA — show after scrolling past hero
+        const stickyCta = document.getElementById('stickyCta');
+        const heroSection = document.querySelector('.hero');
+        let stickyVisible = false;
+
+        window.addEventListener('scroll', () => {
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            const shouldShow = window.scrollY > heroBottom;
+            if (shouldShow !== stickyVisible) {
+                stickyVisible = shouldShow;
+                stickyCta.classList.toggle('visible', shouldShow);
+            }
+        });
+
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {

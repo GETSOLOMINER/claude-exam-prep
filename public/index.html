@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaudeExamPrep — 152 CCA Practice Questions | Claude Certified Architect Exam Prep</title>
+    <meta name="description" content="Pass the Claude Certified Architect (CCA) Foundations exam with 152 high-occurrence practice questions. Organized by domain with detailed explanations. Free sample available.">
+    <meta name="keywords" content="CCA exam prep, Claude Certified Architect, Anthropic certification, CCA practice questions, Claude API certification, CCA study guide">
+    <meta property="og:title" content="ClaudeExamPrep — 152 CCA Practice Questions">
+    <meta property="og:description" content="The highest-probability path to passing the CCA exam. 152 practice questions across all 6 domains.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://claudeexamprep.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://claudeexamprep.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --brand-dark: #0f172a;
+            --brand-primary: #e94560;
+            --brand-accent: #3b82f6;
+            --brand-green: #22c55e;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-light: #94a3b8;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --bg-dark: #0f172a;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: var(--bg-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── NAVIGATION ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--brand-dark);
+            text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--brand-primary); }
+
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text-primary); }
+
+        .nav-cta {
+            background: var(--brand-primary) !important;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* ─── HERO ─── */
+        .hero {
+            padding: 140px 24px 80px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--brand-dark);
+            max-width: 750px;
+            margin: 0 auto 20px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--brand-primary), #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--brand-primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(233,69,96,0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,69,96,0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-white);
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 56px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--brand-dark);
+        }
+
+        .hero-stat-label {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        /* ─── SECTIONS ─── */
+        section { padding: 80px 24px; }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        .section-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--brand-primary);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: var(--brand-dark);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        /* ─── DOMAINS ─── */
+        .domains-section { background: var(--bg-light); }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .domain-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 28px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .domain-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .domain-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--brand-accent);
+            margin-bottom: 14px;
+        }
+
+        .domain-freq {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-left: 8px;
+            position: relative;
+            top: -2px;
+        }
+
+        .freq-highest { background: #fef2f2; color: #dc2626; }
+        .freq-high { background: #fff7ed; color: #ea580c; }
+        .freq-medium-high { background: #fefce8; color: #ca8a04; }
+        .freq-medium { background: #f0fdf4; color: #16a34a; }
+
+        .domain-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--brand-dark);
+            margin-bottom: 8px;
+        }
+
+        .domain-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .domain-count {
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 12px;
+        }
+
+        /* ─── PRICING ─── */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--brand-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--brand-primary);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+
+        .pricing-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--brand-dark);
+            margin-bottom: 4px;
+        }
+
+        .pricing-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .pricing-price {
+            margin-bottom: 24px;
+        }
+
+        .pricing-amount {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--brand-dark);
+        }
+
+        .pricing-original {
+            font-size: 20px;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .pricing-period {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            color: var(--brand-green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .pricing-btn-free {
+            background: var(--bg-light);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .pricing-btn-free:hover { background: #f1f5f9; }
+
+        .pricing-btn-buy {
+            background: var(--brand-primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(233,69,96,0.3);
+        }
+
+        .pricing-btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,69,96,0.4);
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ─── FEATURES ─── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .feature-card {
+            padding: 4px 0;
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .feature-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--brand-dark);
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ─── FAQ ─── */
+        .faq-section { background: var(--bg-light); }
+
+        .faq-list {
+            max-width: 720px;
+            margin: 48px auto 0;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--brand-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-question:hover { background: var(--bg-light); }
+
+        .faq-chevron {
+            font-size: 18px;
+            color: var(--text-light);
+            transition: transform 0.2s;
+        }
+
+        .faq-item.active .faq-chevron { transform: rotate(180deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ─── EMAIL CAPTURE ─── */
+        .email-section {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .email-section .section-label { color: #fbbf24; }
+        .email-section .section-title { color: white; }
+        .email-section .section-subtitle { color: #94a3b8; margin: 0 auto 32px; }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 460px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 240px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: 2px solid #334155;
+            background: #1e293b;
+            color: white;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .email-input::placeholder { color: #64748b; }
+        .email-input:focus { border-color: var(--brand-accent); }
+
+        .email-submit {
+            padding: 14px 28px;
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .email-submit:hover { opacity: 0.9; }
+
+        .email-note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .email-success {
+            display: none;
+            color: var(--brand-green);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* ─── CTA SECTION ─── */
+        .cta-section {
+            text-align: center;
+            padding: 100px 24px;
+        }
+
+        .cta-section .section-title { margin-bottom: 24px; }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--bg-dark);
+            color: #94a3b8;
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo span { color: var(--brand-primary); }
+
+        .footer-disclaimer {
+            font-size: 12px;
+            color: #64748b;
+            max-width: 600px;
+            margin: 16px auto 0;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover { color: white; }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 768px) {
+            .nav-links a:not(.nav-cta) { display: none; }
+            .hero { padding: 110px 20px 60px; }
+            .hero-stats { gap: 24px; }
+            section { padding: 60px 20px; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+            .domains-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ─── TRUST BADGES ─── */
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .trust-icon { font-size: 16px; }
+
+        /* ─── COMPARISON TABLE ─── */
+        .comparison-section { background: var(--bg-white); }
+
+        .comparison-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto 0;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .comparison-table th {
+            text-align: left;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 2px solid var(--border);
+        }
+
+        .comparison-table th:nth-child(2),
+        .comparison-table th:nth-child(3) { text-align: center; }
+
+        .comparison-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .comparison-table td:nth-child(2),
+        .comparison-table td:nth-child(3) { text-align: center; }
+
+        .comparison-table .highlight-col {
+            background: #fef2f2;
+            font-weight: 600;
+            color: var(--brand-primary);
+        }
+
+        .check { color: var(--brand-green); font-weight: 700; }
+        .cross { color: var(--text-light); }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">Claude<span>ExamPrep</span></a>
+            <div class="nav-links">
+                <a href="#domains">Exam Domains</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="#pricing" class="nav-cta">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">CCA Foundations Exam — March 2026</div>
+        <h1>Pass the CCA Exam with <em>152 Practice Questions</em></h1>
+        <p>Every question maps to a real exam domain and is weighted toward high-frequency topics. Detailed explanations teach you the "why" — not just the "what."</p>
+        <div class="hero-buttons">
+            <a href="#pricing" class="btn btn-primary">Get the Full Set — $17</a>
+            <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Free 10-Question Sample</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-number">152</div>
+                <div class="hero-stat-label">Practice Questions</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">6</div>
+                <div class="hero-stat-label">Exam Domains</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">100%</div>
+                <div class="hero-stat-label">Answer Explanations</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-number">2026</div>
+                <div class="hero-stat-label">Updated for Latest Exam</div>
+            </div>
+        </div>
+        <div class="trust-bar">
+            <div class="trust-item"><span class="trust-icon">📄</span> Instant PDF Download</div>
+            <div class="trust-item"><span class="trust-icon">🔒</span> Secure Checkout</div>
+            <div class="trust-item"><span class="trust-icon">⚡</span> Study on Any Device</div>
+        </div>
+    </section>
+
+    <!-- EXAM DOMAINS -->
+    <section class="domains-section" id="domains">
+        <div class="container">
+            <div class="section-label">What the CCA Tests</div>
+            <div class="section-title">6 Domains. Weighted for Frequency.</div>
+            <div class="section-subtitle">The CCA exam tests these domains with varying frequency. Our questions are weighted to match — so you study what actually appears on exam day.</div>
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <div class="domain-number">1</div>
+                    <span class="domain-freq freq-highest">Highest Frequency</span>
+                    <div class="domain-name">Claude API Architecture</div>
+                    <div class="domain-desc">Model selection, context management, token optimization, streaming, rate limits, and production integration patterns.</div>
+                    <div class="domain-count">30 questions in this set</div>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-number">2</div>
+                    <span class="domain-freq freq-high">High Frequency</span>
+                    <div class="domain-name">Prompt Engineering</div>
+                    <div class="domain-desc">System prompts, XML tags, chain-of-thought, few-shot examples, output formatting, and production prompt reliability.</div>
+                    <div class="domain-count">28 questions in this set</div>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-number">3</div>
+                    <span class="domain-freq freq-high">High Frequency</span>
+                    <div class="domain-name">Safety & Constitutional AI</div>
+                    <div class="domain-desc">Constitutional AI framework, RLHF, alignment principles, responsible deployment, and compliance design.</div>
+                    <div class="domain-count">25 questions in this set</div>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-number">4</div>
+                    <span class="domain-freq freq-medium-high">Medium-High</span>
+                    <div class="domain-name">Multi-Agent Systems</div>
+                    <div class="domain-desc">MCP protocol, agent orchestration, tool use, function calling, agentic loops, and memory management.</div>
+                    <div class="domain-count">25 questions in this set</div>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-number">5</div>
+                    <span class="domain-freq freq-medium">Medium Frequency</span>
+                    <div class="domain-name">Production Deployment</div>
+                    <div class="domain-desc">Scaling, latency optimization, error handling, observability, cost management, and reliability patterns.</div>
+                    <div class="domain-count">22 questions in this set</div>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-number">6</div>
+                    <span class="domain-freq freq-medium">Medium Frequency</span>
+                    <div class="domain-name">Model Evaluation & Selection</div>
+                    <div class="domain-desc">Claude model trade-offs, evaluation frameworks, benchmarks, A/B testing, and choosing the right model.</div>
+                    <div class="domain-count">22 questions in this set</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY THIS SET -->
+    <section>
+        <div class="container">
+            <div class="section-label">Why ClaudeExamPrep</div>
+            <div class="section-title">Built Different from Other Prep Materials</div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <div class="feature-name">Weighted for Frequency</div>
+                    <div class="feature-desc">Questions are allocated proportionally to how often each domain appears on the actual CCA exam. No wasted study time on low-yield topics.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <div class="feature-name">Explanations That Teach</div>
+                    <div class="feature-desc">Every answer includes a detailed explanation of why the correct answer is right and why the others aren't. Build deep understanding, not surface memorization.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-name">Updated for March 2026</div>
+                    <div class="feature-desc">Questions reflect the latest Claude models (Opus 4.6, Sonnet 4.6, Haiku 4.5), MCP protocol, and current API specifications. Not outdated material.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-name">Organized by Domain</div>
+                    <div class="feature-desc">Quickly identify your weak areas and focus your remaining prep time where it matters most. Each domain is clearly separated and labeled.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-name">Based on Official Docs</div>
+                    <div class="feature-desc">Every question is sourced from Anthropic's published documentation, API specs, and publicly available exam domain information.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-name">Study Anywhere</div>
+                    <div class="feature-desc">PDF format works on any device — laptop, tablet, or phone. Print it out or study digitally. No app to install, no account to create.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" style="background: var(--bg-light);">
+        <div class="container" style="text-align: center;">
+            <div class="section-label">Pricing</div>
+            <div class="section-title">Start Free. Upgrade When You're Ready.</div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Free Sample</div>
+                    <div class="pricing-desc">Try before you buy</div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$0</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>10 exam-style questions</li>
+                        <li>Covers all 6 domains</li>
+                        <li>Full answer explanations</li>
+                        <li>Instant PDF download</li>
+                    </ul>
+                    <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="pricing-btn pricing-btn-free" download>Download Free Sample</a>
+                    <div class="pricing-note">No email required</div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">BEST VALUE — LAUNCH PRICE</div>
+                    <div class="pricing-name">Full Question Set</div>
+                    <div class="pricing-desc">Everything you need to pass</div>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$17</span>
+                        <span class="pricing-original">$39</span>
+                        <div class="pricing-period">One-time payment · Instant download</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>152 practice questions</li>
+                        <li>All 6 CCA exam domains</li>
+                        <li>Detailed explanation for every answer</li>
+                        <li>Weighted for high-frequency topics</li>
+                        <li>Updated for March 2026 exam</li>
+                        <li>PDF — study on any device</li>
+                    </ul>
+                    <a href="#buy" class="pricing-btn pricing-btn-buy" id="buyButton">Buy Now — $17</a>
+                    <div class="pricing-note">Secure checkout via Stripe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CCA EXAM INFO -->
+    <section class="comparison-section">
+        <div class="container" style="text-align: center;">
+            <div class="section-label">Exam Overview</div>
+            <div class="section-title">CCA Foundations — What You're Preparing For</div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Detail</th>
+                        <th>CCA Foundations Exam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Questions</td><td>60 multiple choice</td></tr>
+                    <tr><td>Duration</td><td>120 minutes (proctored)</td></tr>
+                    <tr><td>Passing Score</td><td>720 / 1000</td></tr>
+                    <tr><td>Cost</td><td>$99 per attempt</td></tr>
+                    <tr><td>Access</td><td>Claude Partner Network members</td></tr>
+                    <tr><td>Domains Tested</td><td>6 competency domains</td></tr>
+                    <tr><td>Open Resources?</td><td>No — fully proctored, closed book</td></tr>
+                    <tr><td>Prep Materials</td><td>Anthropic Academy (free) + practice questions</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="container" style="text-align: center;">
+            <div class="section-label">FAQ</div>
+            <div class="section-title">Common Questions</div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">What exactly is the CCA Foundations exam? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">The Claude Certified Architect (CCA) Foundations exam is Anthropic's official technical certification, launched March 12, 2026. It's a proctored, 60-question exam scored on a 100–1,000 scale with a passing score of 720. It validates that engineers can design and build production-grade Claude applications. The exam costs $99 per attempt and is currently available to Claude Partner Network members.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are these actual CCA exam questions? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">No. These are independently created practice questions based on publicly available information about the CCA exam domains and Anthropic's published documentation. They are designed to help you prepare by testing the same concepts and at a similar depth, but they are not sourced from the actual exam. We recommend using these alongside Anthropic Academy's free courses.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How were the 152 questions selected and weighted? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Questions are allocated across all 6 CCA exam domains proportionally to their reported frequency on the exam. Higher-frequency domains (like Claude API Architecture and Prompt Engineering) have more questions. Each question is based on concepts from Anthropic's official documentation, API specs, and published best practices.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is this affiliated with Anthropic? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">No. ClaudeExamPrep is an independent, third-party study resource. It is not affiliated with, endorsed by, or sponsored by Anthropic, PBC. "Claude" and "CCA" are trademarks of Anthropic used here for descriptive purposes only. We recommend Anthropic Academy as your primary study resource.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What format are the questions? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">The questions are delivered as a professionally formatted PDF file. Each question has 4 multiple-choice options, a clearly marked correct answer, and a detailed explanation. They are organized by exam domain so you can focus your study on specific areas. The PDF works on any device — print it or study digitally.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there a refund policy? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Since this is a digital product delivered instantly, we encourage you to download the free 10-question sample first to evaluate the quality and format. If you're satisfied with the sample, the full set follows the same format and depth across all 152 questions.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Will questions be updated as the exam evolves? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">Yes. We plan to update the question set as Anthropic releases new models, API features, and exam updates. Sign up for our email list below to be notified when new questions are available. Current purchasers will receive updates at no additional cost.</div></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What's the best way to study for the CCA exam? <span class="faq-chevron">▼</span></button>
+                    <div class="faq-answer"><div class="faq-answer-inner">We recommend a three-part approach: (1) Complete Anthropic Academy's free preparation courses on Skilljar, (2) Get hands-on experience with the Claude API, Claude Code, and MCP, and (3) Test yourself with practice questions to identify and fill knowledge gaps. These practice questions are designed for step 3.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMAIL CAPTURE -->
+    <section class="email-section" id="updates">
+        <div class="container">
+            <div class="section-label">Stay Updated</div>
+            <div class="section-title">Get Notified When New Questions Drop</div>
+            <div class="section-subtitle">We add new practice questions as the CCA exam evolves. Enter your email and we'll notify you — free.</div>
+            <form class="email-form" id="emailForm">
+                <input type="email" class="email-input" placeholder="you@example.com" required id="emailInput">
+                <button type="submit" class="email-submit">Notify Me</button>
+            </form>
+            <div class="email-note" id="emailNote">No spam. Just new questions and exam updates.</div>
+            <div class="email-success" id="emailSuccess">You're on the list! We'll email you when new questions are available.</div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="section-title">Ready to Prepare for the CCA?</div>
+            <p style="color: var(--text-secondary); font-size: 17px; max-width: 550px; margin: 0 auto 32px; line-height: 1.7;">Start with the free sample. No email, no sign-up. If you like what you see, get the full 152-question set.</p>
+            <div class="hero-buttons">
+                <a href="/ClaudeExamPrep_Free_Sample_10_Questions.pdf" class="btn btn-secondary" download>Free 10-Question Sample</a>
+                <a href="#pricing" class="btn btn-primary">Get Full Set — $17</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">Claude<span>ExamPrep</span></div>
+            <p style="font-size: 14px;">152 CCA practice questions to help you pass the Claude Certified Architect exam.</p>
+            <div class="footer-disclaimer">
+                This is an independent study resource and is NOT affiliated with, endorsed by, or sponsored by Anthropic, PBC. "Claude," "Claude Certified Architect," and "CCA" are trademarks of Anthropic, PBC. Used here for descriptive purposes only. Questions are based on publicly available exam domain information and Anthropic documentation.
+            </div>
+            <div class="footer-links">
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="#updates">Updates</a>
+                <a href="mailto:support@claudeexamprep.com">Contact</a>
+            </div>
+            <p style="font-size: 12px; color: #475569; margin-top: 24px;">© 2026 ClaudeExamPrep.com. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                // Open clicked if it was closed
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Email form
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            // In production, this would POST to your email service (ConvertKit, Mailchimp, etc.)
+            console.log('Email captured:', email);
+            document.getElementById('emailForm').style.display = 'none';
+            document.getElementById('emailNote').style.display = 'none';
+            document.getElementById('emailSuccess').style.display = 'block';
+        });
+
+        // Buy button — in production, replace with your Stripe/Gumroad link
+        document.getElementById('buyButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Payment integration needed! Replace this with your Stripe Checkout or Gumroad link.\n\nFor quick setup:\n1. Create a Gumroad account (free)\n2. Upload the PDF\n3. Set price to $17\n4. Replace this button href with your Gumroad link');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#buy') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
